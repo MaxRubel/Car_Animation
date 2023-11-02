@@ -1,0 +1,14 @@
+body{
+}
+
+.car{
+  white-space: pre;
+  font-size:1%;
+}
+
+.carGo{
+  background-color: aqua;
+  color:red;
+  width: min-content;
+  display: inline-block;
+}
