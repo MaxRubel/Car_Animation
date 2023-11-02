@@ -68,44 +68,18 @@ let space = "  ";
 let array = ["1", "2", "3"];
 let i = 0;
 
-function test() {
+function drive() {
   setTimeout(() => {
     for (let c = 0; c < carArray.length; c++) {
       carArray[c] = space + carArray[c];
       i++;
       renderToDom();
-      console.log(i);
     }
-    if (i < 5000) {
-      test();
+    console.log(i)
+    if (i < 6000) {
+      drive();
     }
-    return;
   }, 3);
 }
 
-// if (i = 300) {
-//   for (let c = 0; c < carArray.length; c++) {
-//     carArray[c] = carArray[c] + "<br>";
-//     i++;
-//   }
-// }
-test();
-// function animation_loop() {
-//   setTimeout(() => {
-//     console.log("hey")
-//     if (i < 385) {
-//       for (line of carArray) {
-//         line = " " + line;
-//         renderToDom();
-//       }
-//       i++;
-//       animation_loop();
-//     }
-//   }, 8);
-// }
-
-// animation_loop();
-// renderToDom();
-// test();
-// const carGo=document.getElementById("carGo");
-document.getElementById("car0").focus();
+drive();
